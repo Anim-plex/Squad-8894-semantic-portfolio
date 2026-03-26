@@ -1,15 +1,15 @@
-/* Squad 8894 Portfolio Styles */
+@import url('https://fonts.cdnfonts.com/css/space-grotesk');
 
 :root {
-    --color-primary: #2c3e50;
+    --color-primary: #222;
     --color-secondary: #8b7355;
     --color-accent: #d4a574;
     --color-text: #1a1a1a;
     --color-text-light: #666666;
     --color-background: #fafaf8;
     --color-card: #ffffff;
-    --font-display: 'Crimson Pro', serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Space Grotesk', sans-serif;
 }
 
 * {
@@ -149,15 +149,24 @@ section {
     animation: fadeInUp 1s ease forwards;
 }
 
-section:nth-child(2) { animation-delay: 0.2s; }
-section:nth-child(3) { animation-delay: 0.4s; }
-section:nth-child(4) { animation-delay: 0.6s; }
+section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+section:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+section:nth-child(4) {
+    animation-delay: 0.6s;
+}
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -176,11 +185,16 @@ section:nth-child(4) { animation-delay: 0.6s; }
     justify-content: space-between;
     gap: 4rem;
     padding-top: 10rem;
+    background-image: url(https://images.unsplash.com/photo-1771792449907-2df8ab6b5ebc?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    opacity: 0;
+
+
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 600px;
+    /* flex: 1; */
+    max-width: 660px;
+    text-align: center;
 }
 
 .hero-label {
@@ -422,7 +436,7 @@ h2 {
 
 #contact h2 {
     color: white;
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
@@ -522,6 +536,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
+
     /* Show Hamburger */
     .hamburger {
         display: flex;
@@ -567,7 +582,7 @@ h2 {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     h2 {
