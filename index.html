@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Squad 8894 - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="landingpage.css">
-   
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="landingpage.css">
 </head>
-
 <body>
     <!-- Navigation -->
     <nav>
         <div class="container">
             <div class="logo">Squad <span>8894</span></div>
-            <ul>
+            
+            <!-- Hamburger Button -->
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -26,24 +35,22 @@
             </ul>
         </div>
     </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay"></div>
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-container">
+        <div class="container hero-container">
             <div class="hero-content">
                 <div class="hero-label">Welcome to Squad 8894</div>
                 <h1>Creating Digital Experiences That Matter</h1>
                 <p class="hero-description">
-                    We're a collective of designers, developers, and strategists dedicated to building meaningful
-                    digital products that solve real problems.
+                    We're a collective of designers, developers, and strategists dedicated to building meaningful digital products that solve real problems.
                 </p>
                 <a href="#projects" class="cta-button">View Our Work</a>
             </div>
-            <!-- <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Team collaboration">
-                <div class="image-label">8894</div>
-            </div> -->
+           
         </div>
     </section>
 
@@ -60,14 +67,10 @@
             <div class="about-grid">
                 <div class="about-content">
                     <p>
-                        Squad 8894 was formed with a simple mission: to create digital experiences that don't just look
-                        good, but actually work for the people who use them. We believe in the power of thoughtful
-                        design and smart technology to transform businesses and improve lives.
+                        Squad 8894 was formed with a simple mission: to create digital experiences that don't just look good, but actually work for the people who use them. We believe in the power of thoughtful design and smart technology to transform businesses and improve lives.
                     </p>
                     <p>
-                        Our approach combines strategic thinking with creative execution. We don't just build things—we
-                        solve problems. Every project starts with understanding your goals, your users, and your
-                        challenges. From there, we craft solutions that are both beautiful and effective.
+                        Our approach combines strategic thinking with creative execution. We don't just build things—we solve problems. Every project starts with understanding your goals, your users, and your challenges. From there, we craft solutions that are both beautiful and effective.
                     </p>
                     <div class="stats">
                         <div class="stat">
@@ -85,8 +88,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://plus.unsplash.com/premium_photo-1677529496681-761be9e1feb0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Team workspace">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80" alt="Team workspace">
                 </div>
             </div>
         </div>
@@ -94,7 +96,7 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <div class="projects-container">
+        <div class="container">
             <div class="section-header">
                 <div class="section-number">02 / Projects</div>
                 <h2>Our Work</h2>
@@ -105,53 +107,45 @@
             <div class="projects-grid">
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80"
-                            alt="Analytics Dashboard">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Analytics Dashboard">
                     </div>
                     <div class="project-content">
                         <span class="project-tag">Web Application</span>
                         <h3>Analytics Dashboard</h3>
-                        <p>A comprehensive data visualization platform that helps businesses make informed decisions
-                            through real-time insights and intuitive reporting.</p>
+                        <p>A comprehensive data visualization platform that helps businesses make informed decisions through real-time insights and intuitive reporting.</p>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
-                            alt="E-commerce Platform">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="E-commerce Platform">
                     </div>
                     <div class="project-content">
                         <span class="project-tag">E-Commerce</span>
                         <h3>Modern Marketplace</h3>
-                        <p>A seamless shopping experience designed for conversion, featuring smart search, personalized
-                            recommendations, and frictionless checkout.</p>
+                        <p>A seamless shopping experience designed for conversion, featuring smart search, personalized recommendations, and frictionless checkout.</p>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
-                            alt="Mobile App">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80" alt="Mobile App">
                     </div>
                     <div class="project-content">
                         <span class="project-tag">Mobile App</span>
                         <h3>Productivity Suite</h3>
-                        <p>A cross-platform mobile application that streamlines workflows and enhances team
-                            collaboration with intelligent task management.</p>
+                        <p>A cross-platform mobile application that streamlines workflows and enhances team collaboration with intelligent task management.</p>
                     </div>
                 </article>
 
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&q=80"
-                            alt="Brand Identity">
+                        <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&q=80" alt="Brand Identity">
                     </div>
                     <div class="project-content">
                         <span class="project-tag">Brand Design</span>
                         <h3>Visual Identity</h3>
-                        <p>Complete brand refresh including logo design, color systems, typography, and comprehensive
-                            brand guidelines for consistent application.</p>
+                        <p>Complete brand refresh including logo design, color systems, typography, and comprehensive brand guidelines for consistent application.</p>
                     </div>
                 </article>
             </div>
@@ -160,14 +154,13 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="contact-container">
+        <div class="container">
             <div class="contact-grid">
                 <div class="contact-content">
-                    <div class="section-number">03 / Contact</div>
+                    <div class="section-number" style="color: rgba(255,255,255,0.7);">03 / Contact</div>
                     <h2>Let's Work Together</h2>
                     <p class="section-subtitle">
-                        Have a project in mind? We'd love to hear about it. Get in touch and let's create something
-                        amazing.
+                        Have a project in mind? We'd love to hear about it. Get in touch and let's create something amazing.
                     </p>
                     <div class="contact-info">
                         <div class="contact-item">
@@ -200,6 +193,7 @@
         </div>
     </section>
 
+    <!-- JavaScript -->
     <script>
         // Smooth scroll enhancement
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -219,7 +213,7 @@
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav a');
-
+            
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -236,7 +230,60 @@
                 }
             });
         });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const body = document.body;
+
+        // Toggle menu function
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            
+            // Update aria-expanded for accessibility
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+            
+            // Prevent body scroll when menu is open
+            if (isExpanded) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+        }
+
+        // Hamburger click
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Overlay click - close menu
+        navOverlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking nav links
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Close menu on window resize if open (above tablet size)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+
+        // Close menu on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
     </script>
 </body>
-
 </html>

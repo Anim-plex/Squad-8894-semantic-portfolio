@@ -1,14 +1,14 @@
-@import url('https://fonts.cdnfonts.com/css/space-grotesk');
+/* Squad 8894 Portfolio Styles */
 
 :root {
-    --color-primary: #222;
-    --color-secondary: #935b18;
+    --color-primary: #2c3e50;
+    --color-secondary: #8b7355;
     --color-accent: #d4a574;
     --color-text: #1a1a1a;
     --color-text-light: #666666;
     --color-background: #fafaf8;
     --color-card: #ffffff;
-    --font-display: 'Space Grotesk', sans-serif;
+    --font-display: 'Crimson Pro', serif;
     --font-body: 'DM Sans', sans-serif;
 }
 
@@ -43,8 +43,8 @@ nav {
 }
 
 nav .container {
-    max-width: 90%;
-    margin: auto;
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,12 +56,36 @@ nav .container {
     font-weight: 700;
     color: var(--color-primary);
     letter-spacing: -0.02em;
+    z-index: 1001;
 }
 
 .logo span {
     color: var(--color-secondary);
     font-weight: 400;
 }
+
+/* Hamburger Button - Hidden on Desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.hamburger-line {
+    width: 28px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Animation when Active */
 
 nav ul {
     display: flex;
@@ -97,10 +121,25 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* Mobile Menu Overlay */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(44, 62, 80, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-
-
-
+.nav-overlay.active {
+    display: block;
+    opacity: 1;
+}
 
 /* Sections */
 section {
@@ -110,66 +149,38 @@ section {
     animation: fadeInUp 1s ease forwards;
 }
 
-section:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-section:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-section:nth-child(4) {
-    animation-delay: 0.6s;
-}
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.4s; }
+section:nth-child(4) { animation-delay: 0.6s; }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.hero-container {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    justify-content: center;
-}
-
 .container {
-    width: 90%;
-    margin: auto;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
-}
-
-.container1 {
-    display: flex;
-    justify-content: center;
-}
-
+/* Hero Section */
 #hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
     padding-top: 10rem;
-    background-image: url(https://images.unsplash.com/photo-1766340744738-0c3355ea9879?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
 .hero-content {
     flex: 1;
     max-width: 600px;
-    text-align: center;
 }
 
 .hero-label {
@@ -179,11 +190,6 @@ section:nth-child(4) {
     color: var(--color-secondary);
     font-weight: 600;
     margin-bottom: 1rem;
-    /* background-color: var(--color-text); */
-    /* width: 45%; */
-    /* margin: auto; */
-    border-radius: 50px;
-    padding: 2px;
 }
 
 h1 {
@@ -198,7 +204,7 @@ h1 {
 
 .hero-description {
     font-size: 1.25rem;
-    color: #222;
+    color: var(--color-text-light);
     margin-bottom: 2.5rem;
     line-height: 1.7;
 }
@@ -216,10 +222,9 @@ h1 {
 }
 
 .cta-button:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-card);
-    /* transform: translateY(-2px); */
-    border: none;
+    background: transparent;
+    color: var(--color-primary);
+    transform: translateY(-2px);
 }
 
 .hero-image {
@@ -252,7 +257,6 @@ h1 {
 /* About Section */
 #about {
     background: var(--color-card);
-
 }
 
 .section-header {
@@ -333,14 +337,12 @@ h2 {
 /* Projects Section */
 #projects {
     background: linear-gradient(135deg, #f5f3ef 0%, #fafaf8 100%);
-    width: 90%;
-    margin: auto;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .project-card {
@@ -409,8 +411,6 @@ h2 {
     color: white;
     display: flex;
     align-items: center;
-    width: 90%;
-    margin: auto;
 }
 
 .contact-grid {
@@ -491,7 +491,9 @@ h2 {
         padding: 1.5rem 2rem;
     }
 
-
+    section {
+        padding: 6rem 2rem;
+    }
 
     h1 {
         font-size: 3.5rem;
@@ -508,6 +510,11 @@ h2 {
         grid-template-columns: 1fr;
     }
 
+    .hero-image,
+    .about-image,
+    .contact-image {
+        order: -1;
+    }
 
     .stats {
         grid-template-columns: 1fr;
@@ -515,8 +522,48 @@ h2 {
 }
 
 @media (max-width: 768px) {
+    /* Show Hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide/Transform Nav Menu for Mobile */
     nav ul {
-        gap: 1.5rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        max-width: 350px;
+        height: 100vh;
+        background: var(--color-background);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+        transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    /* Show Menu when Active */
+    nav ul.active {
+        right: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.3rem;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+    }
+
+    nav a::after {
+        display: none;
     }
 
     h1 {
